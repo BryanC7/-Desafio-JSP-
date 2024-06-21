@@ -22,7 +22,15 @@ public class Fibonacci extends HttpServlet {
         GeneralUtilities utilities = new GeneralUtilities();
         String factorial = String.valueOf(utilities.calculateFibonacci(number));
 
-        response.getWriter().append("El factorial de " + number + " es: ").append(factorial);
+        response.getWriter().append("El factorial de " + number + " es: ").append(factorial + "\n");
+
+        int num = 1;
+        int resultado = 1;
+        for (int i = 1; i <= number; i++) {
+            resultado *= i;
+            response.getWriter().append(num + "*" + i + " = " + resultado + "\n");
+            num = resultado;
+        }
     }
 
     @Override

@@ -3,7 +3,8 @@ package cl.praxis.jeejsp.utils;
 public class GeneralUtilities {
     public int calculateFibonacci(int number) {
         int factorial = 1;
-        for (int i = 2; i <= number; ++i) {
+
+        for (int i = 2; i <= number; i++) {
             factorial *= i;
         }
         return factorial;
